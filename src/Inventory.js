@@ -21,7 +21,7 @@ function Inventory({ user }) {
     const [editingId, setEditingId] = useState(null);
     const [editForm, setEditForm] = useState({ price: "", quantity: "" });
 
-    // fetch products in real-time
+    // to fetch products in real-time
     useEffect(() => {
         const unsub = onSnapshot(collection(db, "products"), (snapshot) => {
             const items = snapshot.docs.map((doc) => ({
